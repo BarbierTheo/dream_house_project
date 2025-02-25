@@ -2,10 +2,10 @@ const swiperHeader = new Swiper(".swiper", {
     direction: "horizontal",
     loop: true,
     autoplay: {
-      delay: 20000,
+        delay: 20000,
     },
     effect: "fade",
     fadeEffect: {
-      crossFade: true,
+        crossFade: true,
     },
-  });
+});

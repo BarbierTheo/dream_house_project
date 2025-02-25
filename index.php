@@ -1,12 +1,13 @@
-<?php require_once 'showCards.php'; require_once 'carousel.php' ?>
+<?php require_once 'show.php';
+require_once 'carousel.php' ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream House</title>
+    <title>dreamhouse</title>
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,70 +22,34 @@
 </head>
 
 <body>
-    <nav class="navbarre">
-        <div class="nav-left">
-            <div class="nav-title">
-                <a href="./index.php"><img src="./assets/img/testlogo.png" alt=""></a>
-            </div>
-            <!-- <a class="nav-link" href="#scrollspyHeading1">Collection de meubles</a> -->
-        </div>
-        <!-- <button>commandes</button> -->
-        <div class="groupButton">
-            <button><i class="fa-solid fa-user"></i></button>
-            <button><i class="fa-solid fa-cart-shopping"></i></button>
-        </div>
-    </nav>
+
+    <?= showNavbar() ?>
 
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <!-- <header style="background: url('../assets/img/dream_house_chair.jpg');">
-                    <h1>Urbazan Elegance</h1>
-                    <h2>Une sélection de meubles pour votre confort</h2>
-                    <a href="">Découvrez Soki <i class="fa-solid fa-arrow-right"></i></a>
-                </header> -->
                 <?= showCarousel() ?>
             </div>
             <div class="swiper-slide">
-            <?= showCarousel() ?>
+                <?= showCarousel() ?>
             </div>
             <div class="swiper-slide">
-            <?= showCarousel() ?>
+                <?= showCarousel() ?>
             </div>
         </div>
     </div>
-
-
 
     <div class="title-list">
         <p>Notre collection</p>
     </div>
+
     <section class="meubles-list" id="scrollspyHeading1">
-        <?php
-        echo showCards(8)
-        ?>
-
-
-        <!-- <div class="meuble-card">
-            <div class="img-card" style="background:url(https://placehold.co/300x300);"></div>
-            <span>REF : 57789009</span>
-            <h3>Nom du meuble</h3>
-            <p>99.9€</p>
-            <div class="bottom">
-                <button>ajouter au panier</button>
-                <span><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-placement="top"
-                        data-bs-title="Tooltip on top"></i></span>
-            </div>
-        </div> -->
-
-
+        <?= showCards(8) ?>
     </section>
-    <footer>
-        <div class="links">
-            <a href="#">à propos</a> | <a href="#">mentions légales</a> | <a href="#">confidentialité</a>
-        </div>
-        <span><b>DREAM HOUSE</b> © BARBIER Théo, LE CALVEZ Morgane 2025</span>
-    </footer>
+
+
+    <?= showFooter() ?>
+
     <script src="node_modules\@popperjs\core\dist\umd\popper.js"></script>
     <script src="node_modules\bootstrap\dist\js\bootstrap.js"></script>
     <script>
@@ -93,6 +58,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
