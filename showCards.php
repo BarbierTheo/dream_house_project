@@ -31,7 +31,7 @@ function showCards($total): string
                 <h3>' . $value['product_name'] . '</h3>
                 <p>' . numfmt_format_currency($fmt, $value['product_price'], "EUR") . '</p>
                 <div class="bottom">
-                    <button>ajouter au panier</button>
+                    <button>Ajouter au panier</button>
                     <span><i class="fa-regular fa-eye" data-bs-toggle="tooltip" data-bs-placement="top"
                          data-bs-title="Tooltip on top"></i></span>
                 </div>
