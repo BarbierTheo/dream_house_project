@@ -1,0 +1,184 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+/*** BARRE DE NAVIGATION ***/
+.navbarre {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  background: #F3F3F3;
+  position: fixed;
+  z-index: 99;
+}
+.navbarre .nav-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+}
+.navbarre .nav-left .nav-title {
+  padding: 20px;
+  background: #000;
+}
+.navbarre .nav-left .nav-title a {
+  font-family: "abril fatface";
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navbarre .nav-left a {
+  font-family: "playfair display";
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+.navbarre button {
+  font-family: montserrat;
+  font-size: 1rem;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 15px;
+  border-radius: 25px;
+  border: 0px;
+  margin-right: 20px;
+}
+
+/*** HEADER ***/
+header {
+  background: url("../img/header_max.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-family: "abril fatface";
+  font-size: 5rem;
+  color: #fff;
+  line-height: 5.6rem;
+  margin-top: -4rem;
+}
+header h2 {
+  font-family: "playfair display";
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+/*** LISTE DE TOUS LES MEUBLES ***/
+.meubles-list {
+  width: 80%;
+  margin: 0 auto;
+  background: #fefefe;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.meubles-list .meuble-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 0px solid #ccc;
+  width: 300px;
+  padding: 15px;
+  margin: 15px;
+  /***REFERENCE***/
+  /***NOM DU MEUBLE***/
+  /***PRIX***/
+}
+.meubles-list .meuble-card .img-card {
+  width: 260px;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+}
+.meubles-list .meuble-card span {
+  font-size: 0.9rem;
+  font-family: montserrat;
+  color: #000;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.meubles-list .meuble-card h3 {
+  font-family: "playfair display";
+  color: #000;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 0px 10px;
+}
+.meubles-list .meuble-card p {
+  font-family: "abril fatface";
+  font-weight: bold;
+  color: #000;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 0px 10px;
+}
+.meubles-list .meuble-card .bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  /***AJOUTER AU PANIER***/
+}
+.meubles-list .meuble-card .bottom button {
+  background: #000;
+  padding: 10px;
+  font-family: montserrat;
+  color: #fff;
+  border: 0px;
+  border-radius: 25px;
+  width: 75%;
+}
+.meubles-list .meuble-card .bottom i {
+  font-size: 1rem;
+  color: #000;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  background: #F3F3F3;
+  margin-top: 6rem;
+}
+footer .links {
+  padding: 15px;
+}
+footer .links a {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+}
+footer span {
+  font-family: montserrat;
+  font-size: 1rem;
+  padding: 0px 15px;
+}
+footer span b {
+  font-family: "Abril fatface";
+}/*# sourceMappingURL=style.css.map */

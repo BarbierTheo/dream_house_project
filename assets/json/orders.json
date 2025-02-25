@@ -1,0 +1,26 @@
+[
+	{
+		"order_id" : 1,
+		"user_id" : 1,
+		"user_name" : "Théo",
+		"user_mail" : "théo.barbier@dream_house.com",
+		"user_tel" : "0668785363",
+		"user_password" : "hresjts5984",
+		"user_adresse" : "49 rue de l'Eglise, 76600 Le Havre",
+		"order_date" : "2025-02-25",
+		"product_id" : 2,
+		"order_product_quantity" : 1
+	},
+	{
+		"order_id" : 2,
+		"user_id" : 3,
+		"user_name" : "Saïd",
+		"user_mail" : "said.fadli@laconcurrence.com",
+		"user_tel" : "0668592763",
+		"user_password" : "zjabfoean11",
+		"user_adresse" : "29 Av. Pierre Mendès France, 76290 Montivilliers",
+		"order_date" : "2025-02-25",
+		"product_id" : 6,
+		"order_product_quantity" : 1
+	}
+]

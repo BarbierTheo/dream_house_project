@@ -1,0 +1,66 @@
+[
+	{
+		"user_id" : 1,
+		"user_name" : "Théo",
+		"user_mail" : "théo.barbier@dream_house.com",
+		"user_tel" : "0668785363",
+		"user_password" : "hresjts5984",
+		"user_adresse" : "49 rue de l'Eglise, 76600 Le Havre"
+	},
+	{
+		"user_id" : 2,
+		"user_name" : "Morgane",
+		"user_mail" : "morgane.lcvz@dream_house.com",
+		"user_tel" : "0666422763",
+		"user_password" : "rheqh556io56",
+		"user_adresse" : "11 Rue Charles Alexandre Lesueur, 76310 Sainte-Adresse"
+	},
+	{
+		"user_id" : 3,
+		"user_name" : "Saïd",
+		"user_mail" : "said.fadli@laconcurrence.com",
+		"user_tel" : "0668592763",
+		"user_password" : "zjabfoean11",
+		"user_adresse" : "29 Av. Pierre Mendès France, 76290 Montivilliers"
+	},
+	{
+		"user_id" : 4,
+		"user_name" : "Élodie",
+		"user_mail" : "elodie.durand@dream_house.com",
+		"user_tel" : "0675321890",
+		"user_password" : "kd9xj48soh",
+		"user_adresse" : "12 rue des Lilas, 75005 Paris"
+	},
+	{
+		"user_id" : 5,
+		"user_name" : "Marc",
+		"user_mail" : "marc.leroy@dream_house.com",
+		"user_tel" : "0678456231",
+		"user_password" : "qkrfp2021hs",
+		"user_adresse" : "22 avenue de la République, 13001 Marseille"
+	},
+	{
+		"user_id" : 6,
+		"user_name" : "Claire",
+		"user_mail" : "claire.martin@dream_house.com",
+		"user_tel" : "0612345678",
+		"user_password" : "zvbwP9qg19",
+		"user_adresse" : "45 rue des Fleurs, 59000 Lille"
+	},
+	{
+		"user_id" : 7,
+		"user_name" : "Lucas",
+		"user_mail" : "lucas.dubois@dream_house.com",
+		"user_tel" : "0698765432",
+		"user_password" : "lpX7vqw098",
+		"user_adresse" : "8 rue de la Paix, 75002 Paris"
+	},
+	{
+		"user_id" : 8,
+		"user_name" : "Isabelle",
+		"user_mail" : "isabelle.benoit@dream_house.com",
+		"user_tel" : "0687654321",
+		"user_password" : "drfje21kjt",
+		"user_adresse" : "18 Boulevard Victor Hugo, 44000 Nantes"
+	}
+]

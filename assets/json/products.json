@@ -1,0 +1,102 @@
+[
+	{
+		"product_id" : 1,
+		"product_name" : "Soki",
+		"product_description" : "Son design épuré et sa finition soignée en font l'élément central de votre salon ou bureau. Pour une ambiance chic et intemporelle, laissez-vous séduire par son allure résolument moderne.",
+		"product_price" : 1450,
+		"product_reference" : 7583927,
+		"product_quantity" : 15,
+		"product_img" : "./assets/img/dream_house_chair.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Salle à manger, Salon, Bureau"
+	},
+	{
+		"product_id" : 2,
+		"product_name" : "Sopa",
+		"product_description" : "Son design géométrique et ses coussins profonds apportent une touche de sophistication moderne tout en offrant un confort inégalé. Parfait pour les intérieurs contemporains aux accents bohèmes.",
+		"product_price" : 3200,
+		"product_reference" : 8426710,
+		"product_quantity" : 8,
+		"product_img" : "./assets/img/dream_house_couch.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Salon"
+	},
+	{
+		"product_id" : 6,
+		"product_name" : "Presioso",
+		"product_description" : "Son architecture minimaliste et sa tête de lit capitonnée en font un refuge parfait pour des nuits raffinées et reposantes. Élégance intemporelle pour un sommeil d’exception.",
+		"product_price" : 2800,
+		"product_reference" : 9361842,
+		"product_quantity" : 10,
+		"product_img" : "./assets/img/dream_house_bed.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Chambre"
+	},
+	{
+		"product_id" : 7,
+		"product_name" : "Dinat",
+		"product_description" : "Ce tabouret en bois sculpté aux lignes fluides et intemporelles ajoute une touche d’artisanat moderne à votre intérieur. Parfait pour un coin café ou comme siège d'appoint.",
+		"product_price" : 950,
+		"product_reference" : 7310465,
+		"product_quantity" : 25,
+		"product_img" : "./assets/img/dream_house_stool.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Salle à manger, Chambre, Cuisine & Salle de bain"
+	},
+	{
+		"product_id" : 8,
+		"product_name" : "Lamesa",
+		"product_description" : "Cette table en marbre et acier brossé est le mariage parfait entre robustesse et raffinement. Ses lignes nettes et son plateau luxueux transforment chaque repas en une expérience hors du commun.",
+		"product_price" : 4500,
+		"product_reference" : 6123948,
+		"product_quantity" : 5,
+		"product_img" : "./assets/img/dream_house_table.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Salle à manger, Cuisine & Salle de bain"
+	},
+	{
+		"product_id" : 24,
+		"product_name" : "Chiroq",
+		"product_description" : "Lampe de bureau raffinée allie design épuré et lumière douce, créant une ambiance élégante et apaisante pour vos moments de travail ou de détente.",
+		"product_price" : 350,
+		"product_reference" : 3125487,
+		"product_quantity" : 20,
+		"product_img" : "./assets/img/dream_house_lamp.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Chambre, Bureau"
+	},
+	{
+		"product_id" : 25,
+		"product_name" : "Balbal",
+		"product_description" : "Ce canapé avec son dossier super haut et sa forme arrondie vous enveloppe dans un confort unique.",
+		"product_price" : 2800,
+		"product_reference" : 4561873,
+		"product_quantity" : 10,
+		"product_img" : "./assets/img/dream_house_couch2.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Salon"
+	},
+	{
+		"product_id" : 26,
+		"product_name" : "Marmar",
+		"product_description" : "Cette commode aux portes en marbre noir offre une touche sophistiquée et intemporelle à votre intérieur. Son design minimaliste en fait un choix parfait pour une chambre ou un salon.",
+		"product_price" : 1750,
+		"product_reference" : 7864215,
+		"product_quantity" : 8,
+		"product_img" : "./assets/img/dream_house_dresser.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Salle à manger, Salon, Chambre"
+	},
+	{
+		"product_id" : 27,
+		"product_name" : "Manames",
+		"product_description" : "Ce bain délicatement rosé invite à la détente avec son design épuré et ses lignes douces. Un luxe subtil pour une expérience de relaxation hors du temps, au confort ultime.",
+		"product_price" : 1500,
+		"product_reference" : 8973246,
+		"product_quantity" : 5,
+		"product_img" : "./assets/img/dream_house_bath.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Cuisine & Salle de bain"
+	},
+	{
+		"product_id" : 28,
+		"product_name" : "Jora",
+		"product_description" : "Ce duo de tabourets originaux, aux formes asymétriques et aux matériaux contrastés, apportera une touche dynamique et moderne à votre espace, tout en offrant une assise confortable et élégante.",
+		"product_price" : 1200,
+		"product_reference" : 6589132,
+		"product_quantity" : 12,
+		"product_img" : "./assets/img/dream_house_stool.jpg",
+		"group_concat(cat_nom SEPARATOR ', ')" : "Chambre, Cuisine & Salle de bain"
+	}
+]
