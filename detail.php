@@ -5,7 +5,7 @@
 
 $data = file_get_contents('./assets/json/products.json');
 $json = json_decode($data, TRUE);
-$product = 3;
+$product = 1;
 
 // var_dump($json[$product]);
 $fmt = numfmt_create('fr_FR', NumberFormatter::CURRENCY);
@@ -16,6 +16,8 @@ $reviewsJson = json_decode($reviews, TRUE);
 
 $reviewsUnique = file_get_contents('./assets/json/reviews.json');
 $reviewsUniqueJson = json_decode($reviewsUnique, TRUE);
+
+$product_id = $json[$product]['product_id'];
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,6 @@ $reviewsUniqueJson = json_decode($reviewsUnique, TRUE);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dreamhouse</title>
-    <link href="assets/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -36,6 +37,8 @@ $reviewsUniqueJson = json_decode($reviewsUnique, TRUE);
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -57,9 +60,17 @@ $reviewsUniqueJson = json_decode($reviewsUnique, TRUE);
                 <div class="left">
                     <h2>Catégories :</h2>
                     <div class="tags">
-                        <?php 
-                            
+                        <?php
+                            $nbCategories = explode(", ", $json[$product]['categories']);
+                            //  var_dump($nbCategories);
+                            for ($i=0; $i < count($nbCategories) ; $i++) { ?>
+                                
+                                 <span><?= $nbCategories[$i] ?></span>
 
+                                 <?php
+                            }
+
+                        //    echo $reviewsJson[$product]['moyenne']
                         ?>
 
                         <span>Salle de bain</span>
@@ -95,7 +106,7 @@ $reviewsUniqueJson = json_decode($reviewsUnique, TRUE);
                             <i>Nom du produit</i>
                             <b>+ 50€</b>
                             <i>Frais de port</i>
-                            <h3><?= numfmt_format_currency($fmt, $json[$product]['product_price']+50, "EUR") ?></h3>
+                            <h3><?= numfmt_format_currency($fmt, $json[$product]['product_price'] + 50, "EUR") ?></h3>
                             <i>total</i>
                         </div>
                     </div>
@@ -104,35 +115,36 @@ $reviewsUniqueJson = json_decode($reviewsUnique, TRUE);
         </div>
     </section>
 
-<?php 
-            foreach ($reviewsUniqueJson as $key => $value) {
-                var_dump($value);
-            }
-
-?>
 
     <section class="avis" id="scrollspyHeading1">
+
         <div class="box-avis">
-            <div class="top-avis" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
-                aria-controls="collapseExample">
-                <h3>Username</h3>
-                <div class="note-avis">
-                    <b>4.5</b>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                    <i class="fa-regular fa-star"></i>
-                </div>
-                <span>Avis sur : <b>Nom du produit</b></span>
-            </div>
-            <div class="colle" id="collapseExample">
-                <div class="cb">
-                    Some placeholder content for the collapse component. This panel is hidden by default but revealed
-                    when the user activates the relevant trigger.
-                </div>
-            </div>
+
+            <?php
+            foreach ($reviewsUniqueJson as  $value) {
+                if ($value['product_id'] == $product_id) {
+            ?>
+
+                    <div class="top-avis" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        <h3><?= $value['user_name'] ?></h3>
+                        <div class="note-avis">
+                            <b><?= $value['review_note'] ?></b>
+
+                            <?= showStar($value['review_note']) ?>
+
+                        </div>
+                    </div>
+                    <div class="colle" id="collapseExample">
+                        <div class="cb">
+                            <?= $value['review_description'] ?>
+                        </div>
+                    </div>
+
+            <?php }
+            } ?>
         </div>
+
     </section>
 
     <?= showFooter() ?>

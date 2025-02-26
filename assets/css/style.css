@@ -404,6 +404,7 @@ footer span b {
   align-items: flex-start;
   border-radius: 25px;
   gap: 1.5rem;
+  padding: 0 3rem;
 }
 .product .meuble-main .meuble-bottom .right .top {
   display: flex;

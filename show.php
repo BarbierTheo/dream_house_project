@@ -47,14 +47,14 @@ function showCarousel()
     $json = json_decode($data, TRUE);
     $carousel = '';
 
-        $randomNumber = rand(0, 9);
-        $carousel .= "<header style='background: url(\"" . $json[$randomNumber]['product_img'] . "\");background-size: cover;'>
+    $randomNumber = rand(0, 9);
+    $carousel .= "<header style='background: url(\"" . $json[$randomNumber]['product_img'] . "\");background-size: cover;'>
                         <h1>Urban Elegance</h1>
                         <h2>Une sélection de meubles pour votre confort</h2>
                         <a href='./detail.php'>Découvrez " . $json[$randomNumber]['product_name'] . "<i class='fa-solid fa-arrow-right'></i></a>
                     </header>";
 
-    
+
 
     return $carousel;
 }
@@ -102,16 +102,16 @@ function showCards($total): string
 
 // Page orders
 function showOrders()
-    {
-        $data = file_get_contents('./assets/json/orders.json');
-        $json = json_decode($data, TRUE);
-        // var_dump($json[1]);
+{
+    $data = file_get_contents('./assets/json/orders.json');
+    $json = json_decode($data, TRUE);
+    // var_dump($json[1]);
 
-        $fmt = numfmt_create('fr_FR', NumberFormatter::CURRENCY);
-        $date = new DateTimeImmutable($json[1]['order_date']);
+    $fmt = numfmt_create('fr_FR', NumberFormatter::CURRENCY);
+    $date = new DateTimeImmutable($json[1]['order_date']);
 
 
-        $orders = ' 
+    $orders = ' 
             <div class="oneOrder">
                 <div class="orderRow">
                     <div class="img" style="background: url(assets' . $json[1]['product_img'] . '); background-position : center; background-size: cover;"></div>
@@ -126,5 +126,102 @@ function showOrders()
                 <span class="price">' . numfmt_format_currency($fmt, $json[1]['product_price'], "EUR") . '</span>
             </div>';
 
-        return $orders;
+    return $orders;
+}
+
+
+
+function showStar($review_note)
+{
+    
+    $stars = "";
+
+    switch ($review_note) {
+        case ($review_note <= 0.5):
+            $stars = '<i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>';
+            break;
+        case ($review_note <= 1 and $review_note > 0.5):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>';
+            break;
+        case ($review_note <= 1.5 and $review_note > 1):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>';
+            break;
+        case ($review_note <= 2 and $review_note > 1.5):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>';
+            break;
+        case ($review_note <= 2.5 and $review_note > 2):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>';
+            break;
+        case ($review_note <= 3 and $review_note > 2.5):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>';
+            break;
+        case ($review_note <= 3.5 and $review_note > 3):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>';
+            break;
+        case ($review_note <= 4 and $review_note > 3.5):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>';
+            break;
+        case ($review_note <= 4.5 and $review_note > 4):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>';
+            break;
+        case ($review_note <= 5 and $review_note > 4.5):
+            $stars = '<i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>';
+            break;
+        default:
+            $stars = '<i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>';
     }
+
+    return $stars;
+}
+
+
+function showCategories () {
+
+    $categories = "";
+    
+
+}
