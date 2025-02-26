@@ -1,0 +1,37 @@
+[
+	{
+		"product_id" : 1,
+		"product_name" : "Soki",
+		"moyenne" : 5.0
+	},
+	{
+		"product_id" : 2,
+		"product_name" : "Sopa",
+		"moyenne" : 5.0
+	},
+	{
+		"product_id" : 24,
+		"product_name" : "Chiroq",
+		"moyenne" : 4.0
+	},
+	{
+		"product_id" : 25,
+		"product_name" : "Balbal",
+		"moyenne" : 4.3
+	},
+	{
+		"product_id" : 26,
+		"product_name" : "Marmar",
+		"moyenne" : 4.5
+	},
+	{
+		"product_id" : 27,
+		"product_name" : "Manames",
+		"moyenne" : 5.0
+	},
+	{
+		"product_id" : 28,
+		"product_name" : "Jora",
+		"moyenne" : 4.0
+	}
+]

@@ -369,3 +369,307 @@ footer {
     }
 
 }
+
+
+
+/******PAGE MEUBLE SEUL*******/
+
+.product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img-meuble {
+        width: 90%;
+        height: 500px;
+        margin-top: 6rem;
+    }
+
+    .meuble-barre {
+        width: 90%;
+        border: 1px solid #000;
+        display: flex;
+        flex-direction: row;
+
+        .meuble-ref {
+            background: #000;
+            padding: 15px;
+            font-family: montserrat;
+            font-size: 0.9rem;
+            color: #fff;
+            width: 70%;
+            text-transform: uppercase;
+        }
+
+        .meuble-prix {
+            font-family: montserrat;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+        }
+    }
+
+    .meuble-main {
+        width: 90%;
+
+        h1 {
+            font-family: 'Abril fatface';
+            line-height: 5rem;
+            font-size: 3rem;
+        }
+
+        p {
+            font-family: montserrat;
+            font-size: 1rem;
+        }
+
+        .meuble-bottom {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+            /*** PRODUIT partie gauche ***/
+            .left {
+                width: 55%;
+
+                h2 {
+                    font-family: 'playfair display';
+                    font-weight: 600;
+                }
+
+                /***catégories***/
+                .tags {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1rem;
+
+                    span {
+                        background: #000;
+                        padding: 10px;
+                        font-family: 'playfair display';
+                        border-radius: 25px;
+                        color: #fff;
+                    }
+                }
+
+
+
+                /*** NOTES ET AVIS ***/
+                .note-box {
+                    background: #D9D9D9;
+                    border-radius: 25px;
+                    margin-top: 2rem;
+                    height: 220px;
+                    overflow: hidden;
+
+                    /***TITRE***/
+                    h3 {
+                        font-family: 'playfair display';
+                        font-weight: 800;
+                        font-size: 2rem;
+                        padding: 15px;
+                    }
+
+                    /***COMMENTAIRES***/
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                        font-family: montserrat;
+                        font-size: 1.1rem;
+                        padding: 15px;
+                    }
+
+                    /***NOTE***/
+                    .note {
+                        font-family: 'playfair display';
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 6rem;
+
+                    }
+                }
+
+            }
+
+            /***PRODUIT partie droite***/
+            .right {
+                background: #eee;
+                width: 45%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: flex-start;
+                border-radius: 25px;
+                gap: 1.5rem;
+
+                .top {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 100%;
+                    padding: 30px 0px;
+                    gap: 1.5rem;
+
+                    /***COMMANDER***/
+                    .commande {
+                        display: flex;
+                        flex-direction: column;
+
+                        /***AJOUT produit***/
+                        .quantity {
+                            width: 100%;
+                            border: 1px solid #ccc;
+                            display: flex;
+                            flex-direction: row;
+                            background: #fff;
+                            justify-content: space-between;
+                            padding: 10px;
+
+                            button {
+                                background: #000;
+                                font-family: montserrat;
+                                font-weight: 400;
+                                font-size: 2rem;
+                                color: #fff;
+                                padding: 5px 20px;
+                                border: 0px;
+                                border-radius: 15px;
+                            }
+
+                            p {
+                                width: 30%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-family: montserrat;
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                            }
+                        }
+
+                        /***BOUTONS Panier, paypal, carte****/
+                        .add-cart,
+                        .paypal,
+                        .carte {
+
+                            button {
+                                font-family: 'playfair display';
+                                background: #000;
+                                padding: 10px;
+                                font-weight: 500;
+                                border-radius: 20px;
+                                color: #fff;
+                                border: 0px;
+                                width: 280px;
+                                margin-top: 1.1rem;
+                            }
+                        }
+
+                    }
+
+                    /***PRIX TOTAL***/
+                    .total {
+                        display: flex;
+                        flex-direction: column;
+                        width: 55%;
+                        text-align: right;
+
+                        span {
+                            font-family: montserrat;
+                            font-weight: 500;
+                            font-size: 1.1rem;
+                            border-bottom: 1px solid #ccc;
+                            padding-bottom: 1rem;
+                        }
+
+                        b {
+                            font-family: montserrat;
+                            font-size: 1.5rem;
+                            color: #000;
+                            font-weight: 500;
+                        }
+
+                        i {
+                            font-size: 0.8rem;
+                            text-transform: uppercase;
+                            color: #000;
+                        }
+
+                        h3 {
+                            font-family: montserrat;
+                            font-size: 2.5rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.avis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .box-avis {
+        width: 90%;
+        margin-top: 4rem;
+
+        .top-avis {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            border-bottom: 1px solid #ccc;
+            padding: 15px 0px;
+            cursor: pointer;
+            justify-content: flex-start;
+            align-items: center;
+
+            /***NOM UTILISATEUR / USERNAME***/
+            h3 {
+                font-family: 'abril fatface';
+                font-size: 2.6rem;
+                color: #000;
+            }
+
+            /***NOTE***/
+            .note-avis {
+
+                b {
+                    font-family: montserrat;
+                    font-size: 1.2rem;
+                }
+
+                i {
+                    font-size: 1.2rem;
+                }
+            }
+
+            /***EVALUATION PRODUIT***/
+
+            span {
+                font-family: 'playfair display';
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+
+        .colle {
+
+            /***COMMENTAIRE AVIS***/
+            .cb {
+                padding: 20px 0px;
+                font-family: montserrat;
+            }
+        }
+    }
+}
