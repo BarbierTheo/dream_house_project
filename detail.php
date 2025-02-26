@@ -69,8 +69,6 @@ $product_id = $json[$product]['product_id'];
 
                                  <?php
                             }
-
-                        //    echo $reviewsJson[$product]['moyenne']
                         ?>
 
                         <span>Salle de bain</span>
@@ -122,8 +120,7 @@ $product_id = $json[$product]['product_id'];
 
             <?php
             foreach ($reviewsUniqueJson as  $value) {
-                if ($value['product_id'] == $product_id) {
-            ?>
+                if ($value['product_id'] == $product_id) { ?>
 
                     <div class="top-avis" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
                         aria-controls="collapseExample">

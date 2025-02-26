@@ -1,5 +1,9 @@
 <?php include_once 'show.php' ?>
 
+<?php
+            $data = file_get_contents('./assets/json/users.json');
+            $json = json_decode($data, TRUE);
+            ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,28 +26,29 @@
 
     <?= showNavbar() ?>
 
-    <main>
 
-        <div style="display: flex; justify-content:center; align-items: center; height : 100vh;">
 
-            <?php
-            $data = file_get_contents('./assets/json/users.json');
-            $json = json_decode($data, TRUE);
-            var_dump($json[2]);
-            ?>
-
+    <section class="users">
+        <div class="user-list">
+            <div class="user-tab">
+                <h1>Liste d'utilisateurs</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nom*</th>
+                            <th scope="col">E-mail*</th>
+                            <th scope="col">Téléphone</th>
+                            <th scope="col">Commandes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?= showUsers() ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-    </main>
-
-
-
-
-
-
-
-
-
+    </section>
 
     <?= showFooter() ?>
 

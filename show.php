@@ -219,9 +219,23 @@ function showStar($review_note)
 }
 
 
-function showCategories () {
 
-    $categories = "";
+function showUsers() {
     
+    $users = "";
+    $data = file_get_contents('./assets/json/users.json');
+    $json = json_decode($data, TRUE);
+    // var_dump($json[2]);
+    foreach ($json as $value) {
 
+        $users .= " <tr>
+                        <th scope='row'>" . $value['user_id'] . "</th>
+                        <td>" . $value['user_name'] . "</td>
+                        <td>" . $value['user_mail'] . "</td>
+                        <td>" . $value['user_tel'] . "</td>
+                        <td><a href='#'><i class='fa-solid fa-circle-info'></i></a></td>
+                    </tr>";
+    }
+
+    return $users;
 }
