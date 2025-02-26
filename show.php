@@ -5,9 +5,9 @@
 // $json = json_decode($data, TRUE);
 // var_dump($json);
 
+
 function showNavbar()
 {
-
     $navbar = ' 
             <nav class="navbarre">
                 <div class="nav-left">
@@ -18,17 +18,17 @@ function showNavbar()
                 </div>
                 <!-- <button>commandes</button> -->
                 <div class="groupButton">
-                    <button><i class="fa-solid fa-user"></i></button>
-                    <button><i class="fa-solid fa-cart-shopping"></i></button>
+                    <a href="./user.php"><i class="fa-solid fa-user"></i></a>
+                    <a href="./orders.php"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </nav>';
 
     return $navbar;
 }
 
+
 function showFooter()
 {
-
     $footer = ' 
             <footer>
                 <div class="links">
@@ -40,22 +40,25 @@ function showFooter()
     return $footer;
 }
 
+
 function showCarousel()
 {
     $data = file_get_contents('./assets/json/products.json');
     $json = json_decode($data, TRUE);
     $carousel = '';
 
-    $randomNumber = rand(0, 9);
+        $randomNumber = rand(0, 9);
+        $carousel .= "<header style='background: url(\"" . $json[$randomNumber]['product_img'] . "\");background-size: cover;'>
+                        <h1>Urban Elegance</h1>
+                        <h2>Une sélection de meubles pour votre confort</h2>
+                        <a href='./detail.php'>Découvrez " . $json[$randomNumber]['product_name'] . "<i class='fa-solid fa-arrow-right'></i></a>
+                    </header>";
 
-    $carousel .= "<header style='background: url(\"" . $json[$randomNumber]['product_img'] . "\");background-size: cover;'>
-                    <h1>Urban Elegance</h1>
-                    <h2>Une sélection de meubles pour votre confort</h2>
-                    <a href=''>Découvrez " . $json[$randomNumber]['product_name'] . "<i class='fa-solid fa-arrow-right'></i></a>
-                </header>";
+    
 
     return $carousel;
 }
+
 
 function showCards($total): string
 {
@@ -95,3 +98,33 @@ function showCards($total): string
 
     return $productsCards;
 }
+
+
+// Page orders
+function showOrders()
+    {
+        $data = file_get_contents('./assets/json/orders.json');
+        $json = json_decode($data, TRUE);
+        // var_dump($json[1]);
+
+        $fmt = numfmt_create('fr_FR', NumberFormatter::CURRENCY);
+        $date = new DateTimeImmutable($json[1]['order_date']);
+
+
+        $orders = ' 
+            <div class="oneOrder">
+                <div class="orderRow">
+                    <div class="img" style="background: url(assets' . $json[1]['product_img'] . '); background-position : center; background-size: cover;"></div>
+                    <div class="colRow">
+                        <div class="col">
+                            <a href="" class="">' . $json[1]['product_name'] . '</a>
+                            <span>' . $date->format('d-m-Y')  . '</span>
+                        </div>
+                        <p>Quantité : ' . $json[1]['order_product_quantity'] . '</p>
+                    </div>
+                </div>
+                <span class="price">' . numfmt_format_currency($fmt, $json[1]['product_price'], "EUR") . '</span>
+            </div>';
+
+        return $orders;
+    }

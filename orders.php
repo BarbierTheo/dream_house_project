@@ -1,4 +1,5 @@
-<?php require_once 'show.php'; ?>
+<?php include_once 'show.php' ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,37 +16,23 @@
         rel="stylesheet">
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
     <script src="https://kit.fontawesome.com/dd845416b8.js" crossorigin="anonymous"></script>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
 
     <?= showNavbar() ?>
 
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <?= showCarousel() ?>
-            </div>
-            <div class="swiper-slide">
-                <?= showCarousel() ?>
-            </div>
-            <div class="swiper-slide">
-                <?= showCarousel() ?>
-            </div>
-        </div>
-    </div>
+    <main class="orders">
 
-    <div class="title-list">
-        <p>Notre collection</p>
-    </div>
+        <h1>Mes commandes</h1>
+        <hr>
+        <section>
 
-    <section class="meubles-list" id="scrollspyHeading1">
-        <?= showCards(8) ?>
-    </section>
+            <?= showOrders() ?>
 
+        </section>
+
+    </main>
 
     <?= showFooter() ?>
 
@@ -55,7 +42,6 @@
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
 </body>
