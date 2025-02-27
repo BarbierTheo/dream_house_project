@@ -94,26 +94,27 @@ body {
 
 @media screen and (max-width: 1200px) {
 
-    .navbarre{
+    .navbarre {
         .nav-left {
-        .logo {
-            width: 80% !important;
-            min-width: 13rem !important;
-            margin-left: 20px !important;
+            .logo {
+                width: 80% !important;
+                min-width: 13rem !important;
+                margin-left: 20px !important;
+            }
         }
-    }
 
-    .groupButton{
-        flex-direction: column !important;
-        margin-right: 20px !important;
+        .groupButton {
+            flex-direction: column !important;
+            margin-right: 20px !important;
 
-        
-        a {
-            font-size: 0.8rem !important;
-    }
-    }
 
-}}
+            a {
+                font-size: 0.8rem !important;
+            }
+        }
+
+    }
+}
 
 
 
@@ -209,11 +210,11 @@ header {
         h1 {
             display: none;
         }
-        
+
         h2 {
             text-align: center;
         }
-        
+
     }
 }
 
@@ -221,9 +222,9 @@ header {
 @media screen and (max-width: 600px) {
 
     header {
-        
+
         h2 {
-            
+
             font-size: 1.2rem;
             width: 80%;
         }
@@ -375,12 +376,13 @@ footer {
 
     .col {
         display: flex;
-        flex-direction: column;}
+        flex-direction: column;
+    }
 
     a {
         font-family: 'playfair display';
         color: #000;
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
         text-decoration: none;
     }
 
@@ -398,7 +400,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
     }
 
     .orderRow {
@@ -408,14 +410,14 @@ footer {
 
         .img {
             // background: url(../img/dream_house_bed.jpg);
-            height : 10rem;
+            height: 10rem;
             width: 10rem;
             // background-position: center;
             // background-size: cover;
             border-radius: 15px;
         }
 
-        .colRow{
+        .colRow {
             display: flex;
             flex-direction: column;
             height: 10rem;
@@ -459,7 +461,7 @@ footer {
 
         .img {
 
-            height : 5rem !important;
+            height: 5rem !important;
             width: 5rem !important;
         }
 
@@ -470,21 +472,26 @@ footer {
         a {
             font-size: 1.5rem;
         }
+
         span {
             font-size: 0.8rem;
         }
     }
-    
+
+    .orderRow {
+        justify-content: space-around;
+        width: 100%;
+    }
+
     .oneOrder {
         flex-direction: column;
     }
-    
+
     .colRow {
         justify-content: start !important;
         height: auto !important;
     }
 
-    
 }
 
 
@@ -633,7 +640,7 @@ footer {
                 gap: 1.5rem;
                 padding: 0 3rem;
 
-                
+
 
                 .top {
                     display: flex;
@@ -748,7 +755,7 @@ footer {
 
 @media screen and (max-width: 1200px) {
 
-    
+
     .meuble-prix {
         width: 50% !important;
         font-size: 1.3rem !important;
@@ -762,7 +769,7 @@ footer {
         width: 100% !important;
     }
 
-    .right{
+    .right {
         width: 100% !important;
 
         .top {
@@ -772,7 +779,7 @@ footer {
 
             .total {
                 width: 80% !important;
-                 text-align: left  !important;
+                text-align: left !important;
             }
         }
     }
@@ -840,24 +847,24 @@ footer {
 
 
 
-/****** PAGE UTILISATEURS *******/ 
+/****** PAGE UTILISATEURS *******/
 
 .users {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     .user-list {
-        width:90%;
-        padding-top:6rem;
-        height:100vh;
+        width: 90%;
+        padding-top: 6rem;
+        height: 100vh;
 
         h1 {
             font-family: 'playfair display';
-            font-weight:500;
-            color:#000;
+            font-weight: 500;
+            color: #000;
         }
 
         .user-tab {
@@ -866,37 +873,59 @@ footer {
 
                 th {
                     font-family: montserrat;
-                    font-size:1rem;
+                    font-size: 1rem;
                 }
 
                 td {
                     font-family: montserrat;
-                    font-size:1rem;
-                    padding:15px;
+                    font-size: 1rem;
+                    padding: 15px;
 
                     a {
                         font-family: montserrat;
                         text-transform: uppercase;
-                        color:#fff;
-                        background:#000;
-                        padding:8px;
-                        border-radius:20px;
+                        color: #fff;
+                        background: #000;
+                        padding: 8px;
+                        border-radius: 20px;
                         text-decoration: none;
-                        font-size:0.9rem;
+                        font-size: 0.9rem;
                     }
 
                     span {
                         font-family: montserrat;
                         text-transform: uppercase;
-                        color:#fff;
-                        background:grey;
-                        padding:8px;
-                        border-radius:20px;
+                        color: #fff;
+                        background: grey;
+                        padding: 8px;
+                        border-radius: 20px;
                         text-decoration: none;
-                        font-size:0.9rem;
+                        font-size: 0.9rem;
                     }
                 }
             }
+        }
+    }
+}
+
+
+
+// ==================================================================
+//          RESPONSIVE PAGE USERS
+// ==================================================================
+
+@media screen and (max-width: 1200px) {
+
+    .users {
+        width: 100%;
+
+        td {
+
+            padding: 1px !important;
+        }
+
+        .breakwords {
+            word-break: break-all;
         }
     }
 }

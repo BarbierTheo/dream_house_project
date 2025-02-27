@@ -133,7 +133,7 @@ function showOrders()
 
 function showStar($review_note)
 {
-    
+
     $stars = "";
 
     switch ($review_note) {
@@ -220,8 +220,9 @@ function showStar($review_note)
 
 
 
-function showUsers() {
-    
+function showUsers()
+{
+
     $users = "";
     $data = file_get_contents('./assets/json/users.json');
     $json = json_decode($data, TRUE);
@@ -231,7 +232,7 @@ function showUsers() {
         $users .= " <tr>
                         <th scope='row'>" . $value['user_id'] . "</th>
                         <td>" . $value['user_name'] . "</td>
-                        <td>" . $value['user_mail'] . "</td>
+                        <td class='breakwords'>" . $value['user_mail'] . "</td>
                         <td>" . $value['user_tel'] . "</td>
                         <td><a href='#'><i class='fa-solid fa-circle-info'></i></a></td>
                     </tr>";

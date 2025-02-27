@@ -339,6 +339,10 @@ footer span b {
   .orders span {
     font-size: 0.8rem;
   }
+  .orderRow {
+    justify-content: space-around;
+    width: 100%;
+  }
   .oneOrder {
     flex-direction: column;
   }
@@ -675,4 +679,16 @@ footer span b {
   border-radius: 20px;
   text-decoration: none;
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .users {
+    width: 100%;
+  }
+  .users td {
+    padding: 1px !important;
+  }
+  .users .breakwords {
+    word-break: break-all;
+  }
 }/*# sourceMappingURL=style.css.map */
