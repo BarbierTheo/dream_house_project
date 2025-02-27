@@ -55,12 +55,13 @@ body {
     .groupButton {
 
         background-color: #000;
-        padding: 0.5rem;
+        // padding: 0.5rem;
         margin: 0 50px;
         border-radius: 50px;
-        // padding: 15px 5px;
+        padding: 5px;
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         a {
             font-family: montserrat;
@@ -105,10 +106,14 @@ body {
     .groupButton{
         flex-direction: column !important;
         margin-right: 20px !important;
+
+        
+        a {
+            font-size: 0.8rem !important;
     }
     }
-    
-}
+
+}}
 
 
 
@@ -182,6 +187,47 @@ header {
     font-size: 1.5rem;
 
 
+}
+
+
+
+
+// ==================================================================
+//          RESPONSIVE CAROUSEL
+// ==================================================================
+
+@media screen and (max-width: 1200px) {
+
+    header {
+
+        height: 60vh;
+        border-radius: 0px;
+        margin: 0;
+        padding: 0px;
+        width: 100%;
+
+        h1 {
+            display: none;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    header {
+        
+        h2 {
+            
+            font-size: 1.2rem;
+            width: 80%;
+        }
+    }
 }
 
 /*** LISTE DE TOUS LES MEUBLES ***/
@@ -400,6 +446,46 @@ footer {
 
 }
 
+
+// ==================================================================
+//          RESPONSIVE PAGE commandes
+// ==================================================================
+
+@media screen and (max-width: 1200px) {
+
+    .orders {
+
+        // max-width: 90vw;
+
+        .img {
+
+            height : 5rem !important;
+            width: 5rem !important;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        a {
+            font-size: 1.5rem;
+        }
+        span {
+            font-size: 0.8rem;
+        }
+    }
+    
+    .oneOrder {
+        flex-direction: column;
+    }
+    
+    .colRow {
+        justify-content: start !important;
+        height: auto !important;
+    }
+
+    
+}
 
 
 /******PAGE MEUBLE SEUL*******/

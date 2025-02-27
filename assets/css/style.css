@@ -34,11 +34,12 @@ body {
 }
 .navbarre .groupButton {
   background-color: #000;
-  padding: 0.5rem;
   margin: 0 50px;
   border-radius: 50px;
+  padding: 5px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .navbarre .groupButton a {
   font-family: montserrat;
@@ -67,6 +68,9 @@ body {
   .navbarre .groupButton {
     flex-direction: column !important;
     margin-right: 20px !important;
+  }
+  .navbarre .groupButton a {
+    font-size: 0.8rem !important;
   }
 }
 /*** HEADER ***/
@@ -127,6 +131,27 @@ header a:hover {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1200px) {
+  header {
+    height: 60vh;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+  }
+  header h1 {
+    display: none;
+  }
+  header h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  header h2 {
+    font-size: 1.2rem;
+    width: 80%;
+  }
+}
 /*** LISTE DE TOUS LES MEUBLES ***/
 .meubles-list {
   width: 80%;
@@ -300,6 +325,28 @@ footer span b {
   font-size: 1.8rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .orders .img {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+  .orders h1 {
+    font-size: 1.5rem;
+  }
+  .orders a {
+    font-size: 1.5rem;
+  }
+  .orders span {
+    font-size: 0.8rem;
+  }
+  .oneOrder {
+    flex-direction: column;
+  }
+  .colRow {
+    justify-content: start !important;
+    height: auto !important;
+  }
+}
 /******PAGE MEUBLE SEUL*******/
 .product {
   width: 100%;
