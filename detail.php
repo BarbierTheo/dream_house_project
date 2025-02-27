@@ -5,7 +5,7 @@
 
 $data = file_get_contents('./assets/json/products.json');
 $json = json_decode($data, TRUE);
-$product = 1;
+$product = 3;
 
 // var_dump($json[$product]);
 $fmt = numfmt_create('fr_FR', NumberFormatter::CURRENCY);

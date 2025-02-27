@@ -12,7 +12,7 @@ function showNavbar()
             <nav class="navbarre">
                 <div class="nav-left">
                     <div class="nav-title">
-                        <a href="./index.php"><img src="./assets/img/testlogo.png" alt=""></a>
+                        <a href="./index.php"><img class="logo" src="./assets/img/testlogo.png" alt=""></a>
                     </div>
                     <!-- <a class="nav-link" href="#scrollspyHeading1">Collection de meubles</a> -->
                 </div>
