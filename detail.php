@@ -5,14 +5,11 @@
 
 $data = file_get_contents('./assets/json/products.json');
 $json = json_decode($data, TRUE);
-$product = 3;
+$product = 0;
 
 // var_dump($json[$product]);
 $fmt = numfmt_create('fr_FR', NumberFormatter::CURRENCY);
 
-
-$reviews = file_get_contents('./assets/json/reviews_avg.json');
-$reviewsJson = json_decode($reviews, TRUE);
 
 $reviewsUnique = file_get_contents('./assets/json/reviews.json');
 $reviewsUniqueJson = json_decode($reviewsUnique, TRUE);
@@ -37,7 +34,7 @@ $product_id = $json[$product]['product_id'];
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        
+
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -61,23 +58,20 @@ $product_id = $json[$product]['product_id'];
                     <h2>Catégories :</h2>
                     <div class="tags">
                         <?php
-                            $nbCategories = explode(", ", $json[$product]['categories']);
-                            //  var_dump($nbCategories);
-                            for ($i=0; $i < count($nbCategories) ; $i++) { ?>
-                                
-                                 <span><?= $nbCategories[$i] ?></span>
+                        $nbCategories = explode(", ", $json[$product]['categories']);
+                        //  var_dump($nbCategories);
+                        for ($i = 0; $i < count($nbCategories); $i++) { ?>
 
-                                 <?php
-                            }
+                            <span><?= $nbCategories[$i] ?></span>
+
+                        <?php
+                        }
                         ?>
-
-                        <span>Salle de bain</span>
-                        <span>Cuisine</span>
                     </div>
                     <div class="note-box">
                         <h3>Notes et Avis</h3>
                         <a href="#scrollspyHeading1">Voir les commentaires</a>
-                        <div class="note"><?= $reviewsJson[$product]['moyenne'] ?>/5</div>
+                        <div class="note"><?= $json[$product]['note'] ?>/5</div>
                     </div>
                 </div>
                 <div class="right">

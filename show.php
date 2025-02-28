@@ -120,7 +120,7 @@ function showOrders()
                             <a href="" class="">' . $json[1]['product_name'] . '</a>
                             <span>' . $date->format('d-m-Y')  . '</span>
                         </div>
-                        <p>Quantité : ' . $json[1]['order_product_quantity'] . '</p>
+                        <p>Quantité : ' . $json[1]['order_quantity'] . '</p>
                     </div>
                 </div>
                 <span class="price">' . numfmt_format_currency($fmt, $json[1]['product_price'], "EUR") . '</span>
@@ -136,83 +136,12 @@ function showStar($review_note)
 
     $stars = "";
 
-    switch ($review_note) {
-        case ($review_note <= 0.5):
-            $stars = '<i class="fa-solid fa-star-half-stroke"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>';
-            break;
-        case ($review_note <= 1 and $review_note > 0.5):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>';
-            break;
-        case ($review_note <= 1.5 and $review_note > 1):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>';
-            break;
-        case ($review_note <= 2 and $review_note > 1.5):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>';
-            break;
-        case ($review_note <= 2.5 and $review_note > 2):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>';
-            break;
-        case ($review_note <= 3 and $review_note > 2.5):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>';
-            break;
-        case ($review_note <= 3.5 and $review_note > 3):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                    <i class="fa-regular fa-star"></i>';
-            break;
-        case ($review_note <= 4 and $review_note > 3.5):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star"></i>';
-            break;
-        case ($review_note <= 4.5 and $review_note > 4):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-regular fa-star-half-stroke"></i>';
-            break;
-        case ($review_note <= 5 and $review_note > 4.5):
-            $stars = '<i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>';
-            break;
-        default:
-            $stars = '<i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>';
+    for ($i = 1; $i <= $review_note; $i++) {
+        $stars .= '<i class="fa-solid fa-star"></i>';
+    }
+
+    for ($i=$review_note; $i < 5; $i++) { 
+        $review_note < 5 ? $stars .= '<i class="fa-regular fa-star"></i>' : $stars .= '';
     }
 
     return $stars;
