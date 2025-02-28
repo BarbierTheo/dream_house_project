@@ -27,7 +27,11 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <?= showCarousel() ?>
+                <header style='background: url("./assets/img/dream_house_chair.jpg");background-size: cover;'>
+                        <h1>Urban Elegance</h1>
+                        <h2>Une sélection de meubles pour votre confort</h2>
+                        <a href='./detail.php'>Découvrez Soki<i class='fa-solid fa-arrow-right'></i></a>
+                    </header>
             </div>
             <div class="swiper-slide">
                 <?= showCarousel() ?>

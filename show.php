@@ -47,7 +47,7 @@ function showCarousel()
     $json = json_decode($data, TRUE);
     $carousel = '';
 
-    $randomNumber = rand(0, 9);
+    $randomNumber = rand(0, 8);
     $carousel .= "<header style='background: url(\"" . $json[$randomNumber]['product_img'] . "\");background-size: cover;'>
                         <h1>Urban Elegance</h1>
                         <h2>Une sélection de meubles pour votre confort</h2>
